@@ -49,10 +49,15 @@ extension LoginView{
         usernameTextField.placeholder = "Username"
         usernameTextField.delegate = self
         
+        
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
         passwordTextField.delegate = self
+        
+        //for testing only
+        usernameTextField.text = "Kevin"
+        passwordTextField.text = "welcome"
         
         divider.translatesAutoresizingMaskIntoConstraints = false
         divider.backgroundColor = .secondarySystemFill
