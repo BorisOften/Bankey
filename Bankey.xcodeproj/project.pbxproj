@@ -17,6 +17,7 @@
 		81D5E4C9291F3999007BB8E1 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5E4C8291F3999007BB8E1 /* AccountSummaryViewController.swift */; };
 		81D5E51C292175B0007BB8E1 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5E51B292175B0007BB8E1 /* AccountSummaryHeaderView.swift */; };
 		81D5E51E29217645007BB8E1 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D5E51D29217645007BB8E1 /* AccountSummaryHeaderView.xib */; };
+		81D5E52229218684007BB8E1 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5E52129218684007BB8E1 /* AccountSummaryCell.swift */; };
 		81D64904291AB6220027689C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D64903291AB6220027689C /* OnboardingViewController.swift */; };
 		81D64906291AD9860027689C /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D64905291AD9860027689C /* DummyViewController.swift */; };
 		81D64909291AE1A70027689C /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D64908291AE1A70027689C /* LocalState.swift */; };
@@ -36,6 +37,7 @@
 		81D5E4C8291F3999007BB8E1 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		81D5E51B292175B0007BB8E1 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		81D5E51D29217645007BB8E1 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		81D5E52129218684007BB8E1 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		81D64903291AB6220027689C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		81D64905291AD9860027689C /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		81D64908291AE1A70027689C /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
@@ -107,10 +109,27 @@
 			isa = PBXGroup;
 			children = (
 				81D5E4C8291F3999007BB8E1 /* AccountSummaryViewController.swift */,
-				81D5E51B292175B0007BB8E1 /* AccountSummaryHeaderView.swift */,
-				81D5E51D29217645007BB8E1 /* AccountSummaryHeaderView.xib */,
+				81D5E51F29218652007BB8E1 /* Header */,
+				81D5E52029218667007BB8E1 /* Cells */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		81D5E51F29218652007BB8E1 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				81D5E51D29217645007BB8E1 /* AccountSummaryHeaderView.xib */,
+				81D5E51B292175B0007BB8E1 /* AccountSummaryHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		81D5E52029218667007BB8E1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				81D5E52129218684007BB8E1 /* AccountSummaryCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		81D64907291AE17F0027689C /* Utils */ = {
@@ -208,6 +227,7 @@
 				81D5E51C292175B0007BB8E1 /* AccountSummaryHeaderView.swift in Sources */,
 				81D64906291AD9860027689C /* DummyViewController.swift in Sources */,
 				81A6B1EE29039380007D31D9 /* LoginViewController.swift in Sources */,
+				81D5E52229218684007BB8E1 /* AccountSummaryCell.swift in Sources */,
 				81D64904291AB6220027689C /* OnboardingViewController.swift in Sources */,
 				81D5E4C6291F2F4E007BB8E1 /* MainViewController.swift in Sources */,
 				81D5E4C9291F3999007BB8E1 /* AccountSummaryViewController.swift in Sources */,
