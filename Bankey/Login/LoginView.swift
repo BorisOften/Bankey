@@ -54,6 +54,7 @@ extension LoginView{
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
         passwordTextField.delegate = self
+        passwordTextField.enablePasswordToggle()
         
         //for testing only
         usernameTextField.text = "Kevin"
