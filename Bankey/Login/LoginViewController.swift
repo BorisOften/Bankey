@@ -17,7 +17,7 @@ protocol LoginViewControllerDelegate: AnyObject {
 class LoginViewController: UIViewController {
     
     let loginView = LoginView()
-    let SignInButton = UIButton(type: .system)
+    let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
     let titleLabel = UILabel()
     let titleMessageLabel = UILabel()
@@ -59,11 +59,11 @@ extension LoginViewController{
     private func style(){
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
-        SignInButton.translatesAutoresizingMaskIntoConstraints = false
-        SignInButton.configuration = .filled()
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.configuration = .filled()
         //SignInButton.configuration?.imagePadding = 8
-        SignInButton.setTitle("Sign In", for: .normal)
-        SignInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
+        signInButton.setTitle("Sign In", for: .normal)
+        signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
         
         errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
         errorMessageLabel.textAlignment = NSTextAlignment.center
@@ -89,7 +89,7 @@ extension LoginViewController{
     
     private func layout(){
         view.addSubview(loginView)
-        view.addSubview(SignInButton)
+        view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
         view.addSubview(titleLabel)
         view.addSubview(titleMessageLabel)
@@ -103,17 +103,17 @@ extension LoginViewController{
         
         //button
         NSLayoutConstraint.activate([
-            SignInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
-            SignInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
-            SignInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+            signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
+            signInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         
         ])
         
         //error message
         NSLayoutConstraint.activate([
-            errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: SignInButton.bottomAnchor, multiplier: 2),
-            errorMessageLabel.leadingAnchor.constraint(equalTo: SignInButton.leadingAnchor),
-            errorMessageLabel.trailingAnchor.constraint(equalTo: SignInButton.trailingAnchor)
+            errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
+            errorMessageLabel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
+            errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
         
         //title
@@ -157,8 +157,8 @@ extension LoginViewController{
             configureView(withMessage: "Username / password cannot be blank")
             return
         }
-        if username == "Kevin" && password == "welcome" {
-            SignInButton.configuration?.showsActivityIndicator = true
+        if username == "Kevin _" && password == "welcome _" {
+            signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogin()
         } else {
             configureView(withMessage: "Username / password wrong")
@@ -168,7 +168,19 @@ extension LoginViewController{
         private func configureView(withMessage message: String){
             errorMessageLabel.isHidden = false
             errorMessageLabel.text = message
+            shakeButton()
         }
+    
+    private func shakeButton() {
+        let animation = CAKeyframeAnimation()
+        animation.keyPath = "position.x"
+        animation.values = [0, 10, -10, 10, 0]
+        animation.keyTimes = [0, 0.16, 0.5, 0.83, 1]
+        animation.duration = 0.4
+
+        animation.isAdditive = true
+        signInButton.layer.add(animation, forKey: "shake")
+    }
 }
 
 // MARK: - Animations
