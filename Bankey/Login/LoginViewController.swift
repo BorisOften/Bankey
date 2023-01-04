@@ -157,7 +157,7 @@ extension LoginViewController{
             configureView(withMessage: "Username / password cannot be blank")
             return
         }
-        if username == "Kevin _" && password == "welcome _" {
+        if username == "Kevin" && password == "welcome" {
             signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogin()
         } else {
