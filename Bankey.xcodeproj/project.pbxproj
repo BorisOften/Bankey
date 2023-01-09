@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811C6D5A2965CAA6009BB349 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C6D592965CAA6009BB349 /* ProfileTests.swift */; };
 		81A6B1EA29039380007D31D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B1E929039380007D31D9 /* AppDelegate.swift */; };
 		81A6B1EE29039380007D31D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B1ED29039380007D31D9 /* LoginViewController.swift */; };
 		81A6B1F329039382007D31D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A6B1F229039382007D31D9 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		811C6D592965CAA6009BB349 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		81A6B1E629039380007D31D9 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A6B1E929039380007D31D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A6B1ED29039380007D31D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		811C6D5729650613009BB349 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				81D5E53429228053007BB8E1 /* CurrencyFormatterTest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		811C6D5829650627009BB349 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				811C6D592965CAA6009BB349 /* ProfileTests.swift */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 		81A6B1DD29039380007D31D9 = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +188,8 @@
 		81D5E52C29227F75007BB8E1 /* BankeyUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				81D5E53429228053007BB8E1 /* CurrencyFormatterTest.swift */,
+				811C6D5829650627009BB349 /* AccountSummary */,
+				811C6D5729650613009BB349 /* Utils */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -326,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D5E53529228053007BB8E1 /* CurrencyFormatterTest.swift in Sources */,
+				811C6D5A2965CAA6009BB349 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
