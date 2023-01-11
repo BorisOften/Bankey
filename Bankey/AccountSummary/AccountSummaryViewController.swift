@@ -13,14 +13,17 @@ class AccountSummaryViewController: UIViewController {
     var profile: Profile?
     var accounts : [Account] = []
     
-    let headerView = AccountSummaryHeaderView(frame: .zero)
+    
     
     
     // View models
     var headerViewModel = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Welcome", name: "", date: Date())
     var accountsCellViewModels: [AccountSummaryCell.ViewModel] = []
     
+    //components
     var tableView = UITableView()
+    let headerView = AccountSummaryHeaderView(frame: .zero)
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +42,19 @@ extension AccountSummaryViewController {
     private func setup() {
         setupTableView()
         setupTableHeaderView()
+        setupRefreshControl()
         fetchData()
         setupNavigationBar()
     }
     
     func setupNavigationBar() {
         navigationItem.rightBarButtonItem = logoutBarButtonItem
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl.tintColor = appColor
+        refreshControl.addTarget(self, action: #selector(refreshContent), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
     
     private func setupTableView() {
@@ -111,6 +121,10 @@ extension AccountSummaryViewController {
     @objc func logoutTapped(sender: UIButton) {
         NotificationCenter.default.post(name: .logout, object: nil)
     }
+    
+    @objc func refreshContent() {
+            fetchData()
+        }
 }
 
 // MARK: - Networking
@@ -119,9 +133,11 @@ extension AccountSummaryViewController {
         
         let group = DispatchGroup()
         
+        let userId = String(Int.random(in: 1..<4))
+        
         group.enter()
         
-        fetchProfile(forUserId: "1") { result in
+        fetchProfile(forUserId: userId) { result in
             
             switch result {
             case .success(let profile):
@@ -134,7 +150,7 @@ extension AccountSummaryViewController {
         }
         
         group.enter()
-        fetchAccounts(forUserId: "1") { result in
+        fetchAccounts(forUserId: userId) { result in
                     switch result {
                     case .success(let accounts):
                         self.accounts = accounts
@@ -147,6 +163,7 @@ extension AccountSummaryViewController {
         
         group.notify(queue: .main){
             self.tableView.reloadData()
+            self.tableView.refreshControl?.endRefreshing()
         }
     }
     
