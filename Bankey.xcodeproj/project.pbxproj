@@ -16,6 +16,8 @@
 		81A6B1F329039382007D31D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A6B1F229039382007D31D9 /* Assets.xcassets */; };
 		81A6B1F629039382007D31D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A6B1F429039382007D31D9 /* LaunchScreen.storyboard */; };
 		81A6B20229039C23007D31D9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6B20129039C23007D31D9 /* LoginView.swift */; };
+		81D09A3C297ED6C900763688 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D09A3B297ED6C900763688 /* ProfileManager.swift */; };
+		81D09A3E297ED9BB00763688 /* AccountSummaryViewControllTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D09A3D297ED9BB00763688 /* AccountSummaryViewControllTest.swift */; };
 		81D5E4C4291F2E87007BB8E1 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5E4C3291F2E87007BB8E1 /* UIViewController+Utils.swift */; };
 		81D5E4C6291F2F4E007BB8E1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5E4C5291F2F4E007BB8E1 /* MainViewController.swift */; };
 		81D5E4C9291F3999007BB8E1 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5E4C8291F3999007BB8E1 /* AccountSummaryViewController.swift */; };
@@ -57,6 +59,8 @@
 		81A6B1F529039382007D31D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A6B1F729039382007D31D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A6B20129039C23007D31D9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		81D09A3B297ED6C900763688 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		81D09A3D297ED9BB00763688 /* AccountSummaryViewControllTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllTest.swift; sourceTree = "<group>"; };
 		81D5E4C3291F2E87007BB8E1 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		81D5E4C5291F2F4E007BB8E1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		81D5E4C8291F3999007BB8E1 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			children = (
 				811C6D592965CAA6009BB349 /* ProfileTests.swift */,
 				8141BBB5296BC488008C3AAC /* AccountTest.swift */,
+				81D09A3D297ED9BB00763688 /* AccountSummaryViewControllTest.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -164,6 +169,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		81D09A3A297ED65100763688 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				81D09A3B297ED6C900763688 /* ProfileManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		81D5E4C7291F393C007BB8E1 /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 				81E71AAF2945821F00EDB23A /* AccountSummaryViewController+Networking.swift */,
 				81D5E51F29218652007BB8E1 /* Header */,
 				81D5E52029218667007BB8E1 /* Cells */,
+				81D09A3A297ED65100763688 /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -338,6 +352,7 @@
 				81E71AB02945821F00EDB23A /* AccountSummaryViewController+Networking.swift in Sources */,
 				81A6B1EE29039380007D31D9 /* LoginViewController.swift in Sources */,
 				81D5E53729229C66007BB8E1 /* NSNotificationName.swift in Sources */,
+				81D09A3C297ED6C900763688 /* ProfileManager.swift in Sources */,
 				8141BBD8296F2E6C008C3AAC /* SkeletonCell.swift in Sources */,
 				8141BBD6296F2DEB008C3AAC /* SkeletonLoadable.swift in Sources */,
 				81D5E53929229EF0007BB8E1 /* UITextFieldSecureToggle.swift in Sources */,
@@ -357,6 +372,7 @@
 			files = (
 				81D5E53529228053007BB8E1 /* CurrencyFormatterTest.swift in Sources */,
 				8141BBB6296BC488008C3AAC /* AccountTest.swift in Sources */,
+				81D09A3E297ED9BB00763688 /* AccountSummaryViewControllTest.swift in Sources */,
 				811C6D5A2965CAA6009BB349 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
