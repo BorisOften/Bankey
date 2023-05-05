@@ -1,2 +1,2 @@
 # Bankey
- An IOS with UIKit no storyboards
+ An IOS app done with UIKit programmatically (no storyboards)
